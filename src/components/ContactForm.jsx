@@ -1,23 +1,27 @@
 import React from "react";
+import { FaUser, FaEnvelope, FaCommentDots, FaPaperPlane } from "react-icons/fa";
 
 const ContactForm = () => {
   return (
     <form className="contact-form">
-      <div>
-        <label>이름:</label>
-        <input type="text" />
+      <div className="input-group">
+        <FaUser className="input-icon" />
+        <input type="text" placeholder="이름" />
       </div>
-      <div>
-        <label>이메일:</label>
-        <input type="email" />
+      <div className="input-group">
+        <FaEnvelope className="input-icon" />
+        <input type="email" placeholder="이메일" />
       </div>
-      <div>
-        <label>메시지:</label>
-        <textarea></textarea>
+      <div className="input-group">
+        <FaCommentDots className="input-icon" />
+        <textarea placeholder="메시지" />
       </div>
-      <button type="submit">보내기</button>
+      <button type="submit" className="form-button">
+        <FaPaperPlane style={{ marginRight: "6px" }} />
+        보내기
+      </button>
     </form>
   );
 };
 
-export default ContactForm; 
+export default ContactForm;

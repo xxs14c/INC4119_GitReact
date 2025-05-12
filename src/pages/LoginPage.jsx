@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaUser, FaLock } from "react-icons/fa";
 
 const LoginPage = ({ onLogin }) => {
   const [username, setUsername] = useState('');
@@ -18,18 +19,20 @@ const LoginPage = ({ onLogin }) => {
     <div className="login-container">
       <h2>로그인</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>아이디:</label>
+        <div className={`input-group ${error ? "input-error" : ""}`}>
+          <FaUser className="input-icon" />
           <input
             type="text"
+            placeholder="아이디"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-        <div>
-          <label>비밀번호:</label>
+        <div className={`input-group ${error ? "input-error" : ""}`}>
+          <FaLock className="input-icon" />
           <input
             type="password"
+            placeholder="비밀번호"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -41,4 +44,4 @@ const LoginPage = ({ onLogin }) => {
   );
 };
 
-export default LoginPage; 
+export default LoginPage;

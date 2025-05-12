@@ -1,15 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Header = ({ currentPage, setCurrentPage }) => {
+const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <header className="header">
-      <h1>나만의 포트폴리오</h1>
-      <nav>
-        <button onClick={() => setCurrentPage("home")}>홈</button>
-        <button onClick={() => setCurrentPage("about")}>소개</button>
-        <button onClick={() => setCurrentPage("projects")}>프로젝트</button>
-        <button onClick={() => setCurrentPage("contact")}>연락처</button>
-      </nav>
+      <h1
+        style={{ cursor: "pointer" }}
+        onClick={() => navigate("/")}
+      >
+        나만의 포트폴리오
+      </h1>
+      <div className="student-info">
+        <h2> 2020112143 김민준 </h2>
+      </div>
     </header>
   );
 };
