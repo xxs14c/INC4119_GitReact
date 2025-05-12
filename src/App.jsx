@@ -8,6 +8,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
+import CalculatePage from "./pages/CalculatePage";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="/calculator" element={<CalculatePage />} />
           </Routes>
         )}
       </main>

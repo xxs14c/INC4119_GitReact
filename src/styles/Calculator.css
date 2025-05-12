@@ -1,0 +1,57 @@
+.calculator {
+  width: 320px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+  background: #000;
+  color: #0f0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: right;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  min-height: 40px;
+}
+
+.calculator {
+  width: 320px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+  background: #000;
+  color: #0f0;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: right;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  min-height: 40px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* ✅ 버튼 4개씩 정렬 */
+  gap: 0.5rem;
+}
+
+.buttons button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.buttons button:hover {
+  background-color: #ccc;
+}
